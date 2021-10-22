@@ -1,3 +1,3 @@
 # Learning Python
 
-我学习python相关的文件。
+关于我学习python相关的文件
