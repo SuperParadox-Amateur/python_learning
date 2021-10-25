@@ -1,0 +1,19 @@
+# 折线图
+
+使用`px.line`，每个数据点都会表现为2D空间中的折线上的顶点（位置由`x`和`y`列来决定）。
+
+关于折线图的更多例子，请查阅[line and scatter notebook](https://plotly.com/python/line-and-scatter/)。
+
+```py
+import plotly.express as px
+
+df = px.data.gapminder().query("country=='Canada'")
+fig = px.line(
+    df, 
+    x="year", 
+    y="lifeExp", 
+    title='Life expectancy in Canada'
+)
+
+fig.show()
+```
