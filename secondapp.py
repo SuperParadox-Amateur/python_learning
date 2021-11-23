@@ -2,12 +2,13 @@ from datetime import date
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 st.title("展示")
 
 @st.cache
 def get_data():
-    f_path = "C:/Users/15210/Documents/FQ304大修人员剂量明细.xlsx"
+    f_path = "C:/Users/DEll/Documents/FQ304大修人员剂量明细.xlsx"
     data = pd.read_excel(
         f_path,
         sheet_name="数据源",
@@ -67,4 +68,9 @@ selected_date = st.date_input(
     min_value=min_date,
     max_value=max_date)
 
-st.area_chart(total_dose.query("离开日期 <= @selected_date")["EPD-γ剂量(mSv)"])
+fig = px.bar(
+    total_dose.query("离开日期 <= @selected_date")["EPD-γ剂量(mSv)"])
+
+st.plotly_chart(fig)
+
+# st.area_chart(total_dose.query("离开日期 <= @selected_date")["EPD-γ剂量(mSv)"])
