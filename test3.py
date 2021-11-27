@@ -2,6 +2,9 @@
 import pandas as pd
 import numpy as np
 import datetime
+import matplotlib.pyplot as plt
+#%%
+plt.style.use("seaborn")
 #%%
 f_path = "C:/Users/Dell/Documents/data/FQ304大修人员剂量明细.xlsx"
 #%%
@@ -63,6 +66,7 @@ person_total_dose = pd.pivot_table(
         "人员编号": np.count_nonzero,
         "持续时间(h)": np.sum
     },
+    
     # margins=True, margins_name="总计"
 )\
     # .stack(0).reset_index(0)
