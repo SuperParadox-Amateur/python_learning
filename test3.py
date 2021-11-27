@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import datetime
 #%%
-f_path = "C:/Users/Dell/Documents/FQ304大修人员剂量明细.xlsx"
+f_path = "C:/Users/Dell/Documents/data/FQ304大修人员剂量明细.xlsx"
 #%%
 # 确定数据源和数据类型
 data = pd.read_excel(
