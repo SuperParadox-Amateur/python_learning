@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 #%%
-f_path = "C:/Users/15210/Documents/FQ304大修人员剂量明细.xlsx"
+f_path = "C:/Users/Dell/Documents/data/FQ304大修人员剂量明细.xlsx"
 
 #%%
 @st.cache
